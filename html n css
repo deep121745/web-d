@@ -183,7 +183,10 @@ To use an external style sheet, add a link to it in the <head> section of the HT
     border: 1px solid powderblue;
     margin: 50px;
 }
-  
+ 
+
+ also, In order to deal with multiple div we use id's:
+
   To define a specific style for one special element, add an id attribute to the element:
 <p id="p01">I am different</p>
 then define a style for the element with the specific id in head tag:
@@ -192,13 +195,17 @@ then define a style for the element with the specific id in head tag:
 } 
 Note: The id of an element should be unique within a page, so the id selector is used to select one unique element!
 
+******
       To define a style for a special type of elements, add a class attribute to the element:
-<p class="error">I am different</p>
-
+<p class="classname">I am different</p>           (therefore a way to customise same element)
+<p class="secclass">ok</p>
 then define a style for the elements with the specific class:
-p.error {
+p.classname {
     color: red;
 } 
+p.secclass {
+	color: green;
+}
 
      External style sheets can be referenced with a full URL or with a path relative to the current web page.
     1.This example uses a full URL to link to a style sheet:
@@ -221,6 +228,16 @@ MAKING TABLE: tables have rows(tr) and columns(td) {use border="1"with table tag
 </table>
 to make it more good use attribute border .
 
+<style type="text/css">
+	table{border: 3px solid blue;}
+	tr {background-color: yellow;}
+	td {border:2px dashed;}
+</style>
+
+** Wheneever we apply something to table it effects tr as well as td , whenever we apply something to tr it effects tr and td but whenever we apply something to td it doesn't effect anything except td
+
+
+
 MAKING HEADER FOR TABLES:
 use <th></th>tag within <tr></tr>to make headings for your data.
 
@@ -236,6 +253,16 @@ LIST:
 and to enter items in list use<li></li> insise ul tag
 2. Ordered list: <ol></ol>(only difference is that now items come numbered)
 
+Styling unordered list:
+<style type="text/css">
+	ul {list-style-type: circle;}                    (changing bullets)
+</style>
+--> we can also customise our bullet points by downloading it:
+  but use ul{list-style-image:url(filename);}
+
+->ul{border:1 px solid red;
+       list-style-type:none;           (removes bullet)
+          padding:0;}                   (removes default padding)
 
 Formal way to bold, italicised text and text-align:
 <style type="text/css">
@@ -259,6 +286,81 @@ How to add images in our background?
                         (we can also use percentage)
 </style>
 
+CSS BLOCK MODEL:
+Padding-> space b/w text and border
+Margin -> space outside border and outside padding
+Border-> area that outlines padding
+** Padding is inside the border while margin is outside the border
 
 
+<style type="text/css"> 
+h1 {padding: 20px;}
+                                          (we can use keyword top,left,right,bottom)
+</style>
+
+Border has three property :
+border-color: red;
+border-width:  3px;
+border-style:  dashed;
+
+We can also make different borders in different directions:
+border-top-color: ;
+__________________
+________________
+
+we can also use a shorthand technique :
+{
+border: 3px solid black;}
+
+
+
+to adjust margin(space b.w paragraph):
+<style type="text/css">
+	p {margin: 1px;}
+
+</style>
+
+<style type="text/css">
+h4 { width: 350px;
+height: 100px; }          (in gen we don't deal with height)
+</style>
+
+How to style links?  <a href="https://www.google.com">google</a>
+One link has actually four different states:
+<style type="text/css">
+	a:link{color: red;
+	       text-decoration: none;}                     (this sets default link)
+	a:visited{color: green;}                            (tells whether link is previsited)
+	a:hover{background-color: blue;                      (modifies hover properties)
+	           text-decoration: underline;
+	            font-weight: bold;}
+	a:active{background-color: orange;}                   (holding mouse gives active state)
+</style>
+
+How to style more than one element at a time:
+ <style type="text/css">
+ 	h1 , p {color: red;}
+ </style>
+
+Whenever we wanna style particular portion of our element then use span:
+<style type="text/css">
+	span {font-weight: bold;}
+</style>
+<p>today <span>is the</span> day </p>
+
+*************
+THE div ELEMENT:  
+->it gives us ability to arrange different section in our webpage 
+
+<style type="text/css">
+	div {border: 2px;
+	     position: absolute;
+	     width: 300px;
+	     top: 40px;                     (navigation)
+	     left:35px; }
+</style>
+...
+<body>
+<div>abc</div>
+</body>
 
