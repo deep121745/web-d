@@ -1,0 +1,226 @@
+                                What is HTML?
+HTML is the standard markup language for creating Web pages.
+HTML elements are the building blocks of HTML pages and are represented by tags<>
+<tagname>content goes here...</tagname>
+
+The HTML element is everything from the start tag to the end tag
+HTML elements with no content are called empty elements. Empty elements do not have an end tag, such as the <br> element (which indicates a line break).
+
+HTML tags label pieces of content such as "heading", "paragraph", "table", and so on
+
+-->
+    The <!DOCTYPE html> declaration defines version of HTML (The <!DOCTYPE> declaration is not case sensitive.)
+    The <html> element is the root element of an HTML page
+    The <head> element contains meta information about the document (metadata is data about the HTML document. Metadata is not displayed.)
+    --all the browser info goes into the head tag
+    The <title> element specifies a title for the document.(it is done inside head tag)
+    The <body> element contains the visible page content
+    The <h1> element defines a large heading
+    Note: Browsers automatically add some white space (a margin) before and after a heading.
+    The <p> element defines a paragraph
+
+-- the technical stuff(like keywords for search engines,etc) is in head tag and all cool stuff is in the body tag
+The purpose of a web browser  is to read HTML documents and display them.
+
+The browser does not display the HTML tags, but uses them to determine how to display the document.
+
+HTML headings are defined with the <h1> to <h6> tags.
+<h1> defines the most important heading. <h6> defines the least important heading: 
+
+HTML paragraphs are defined with the <p> tag
+
+HTML links are defined with the <a> (anchor)tag:
+<a href="https://www.w3schools.com">This is a link</a> 
+The link's destination is specified in the href attribute. (attributes are used to provide additional information about HTML elements)
+
+HTML images are defined with the <img> tag.
+The source file (src), alternative text (alt), width, and height are provided as attributes:
+ <img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142"> 
+
+
+
+    All HTML elements can have attributes
+    Attributes are always specified in the start tag
+    Attributes usually come in name/value pairs like: name="value"
+The language of the document can be declared in the <html> tag.
+<html lang="en-US">
+
+        a title attribute is added to the <p> element. The value of the title attribute will be displayed as a tooltip when you mouse over the paragraph:
+     <p title="I'm a tooltip">
+This is a paragraph.
+</p> 
+
+The <hr> tag defines a thematic break in an HTML page, and is most often displayed as a horizontal rule.
+
+You cannot be sure how HTML will be displayed.
+Large or small screens, and resized windows will create different results.
+With HTML,you cannot change the output by adding extra spaces or extra lines in your HTML code.
+The browser will remove any extra spaces and extra lines when the page is displayed
+
+The HTML <pre> element defines preformatted text.
+The text inside a <pre> element is displayed in a fixed-width font (usually Courier), and it preserves both spaces and line breaks
+
+Setting the style of an HTML element, can be done with the style attribute.
+Syntax:  
+<tagname style="property:value;">
+The property is a CSS property. The value is a CSS value.
+ 
+
+The background-color property defines the background color for an HTML element (#E6E6FA)
+The color property defines the text color for an HTML element
+The font-family property defines the font to be used for an HTML element
+The font-size property defines the text size for an HTML element
+The text-align property defines the horizontal text alignment for an HTML element
+
+HTML also defines special elements for defining text with a special meaning:
+    <b> - Bold text
+    <strong> - Important text
+    <i> - Italic text
+    <em> - Emphasized text
+    <mark> - Marked/highlighted text
+    <small> - Small text
+    <del> - Deleted text
+    <ins> - Inserted text
+    <sub> - Subscript text
+    <sup> - Superscript text
+
+    The HTML <q> element defines a short quotation
+The HTML <blockquote> element defines a section that is quoted from another source.
+<blockquote cite="http://www.worldwildlife.org/who/index.html">
+
+The HTML <abbr> element defines an abbreviation or an acronym.
+ <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p> 
+
+The HTML <cite> element defines the title of a work.
+
+The HTML <bdo> element defines bi-directional override.
+The <bdo> element is used to override the current text direction:
+<bdo dir="rtl">This text will be written from right to left</bdo> 
+
+You can add comments to your HTML source by using the following syntax:
+<!-- Write your comments here --> 
+
+NAVIGATION SYSTEM(i.e. link to move within same page):
+  to do this first set a destination path as:
+  <a name="section"></a>(we don't need any link ass it is our destination)
+  and then inside body tag give its reference as:
+  <a href="#desired section"
+  this will take us to our desired section>
+
+   link to email address:
+  <a href="mailto:deep745d@gmail.com">Email Deep</a>
+
+In HTML, a color can be specified by using a color name, an RGB value, or a HEX value:
+ 1.  In HTML, a color can be specified by using a color name:Red,Orange,Yellow,Cyan ,Blue.
+ 
+ 2.  In HTML, a color can also be specified as an RGB value, using this formula: rgb(red, green, blue)
+ For example, rgb(255,0,0) is displayed as red, because red is set to its highest value (255) and the others are set to 0.
+
+To display the color black, all color parameters must be set to 0, like this: rgb(0,0,0).
+
+To display the color white, all color parameters must be set to 255, like this: rgb(255,255,255). 
+
+3. In HTML, a color can also be specified using a hexadecimal value in the form: #RRGGBB, where RR (red), GG (green) and BB (blue) are hexadecimal values between 00 and FF (same as decimal 0-255).
+
+                        ,,,, Styling HTML with CSS,,,,
+
+CSS stands for Cascading Style Sheets.
+
+CSS describes how HTML elements are to be displayed on screen, paper, or in other media.
+
+CSS saves a lot of work. It can control the layout of multiple web pages all at once.
+
+CSS can be added to HTML elements in 3 ways:
+
+    Inline - by using the style attribute in HTML elements
+    Internal - by using a <style> element in the <head> section
+    External - by using an external CSS file
+
+         An inline CSS is used to apply a unique style to a single HTML element.
+An inline CSS uses the style attribute of an HTML element.
+ <h1 style="color:blue;">This is a Blue Heading</h1> 
+
+         An internal CSS is used to define a style for a single HTML page.
+An internal CSS is defined in the <head> section of an HTML page, within a <style> element:
+<head>
+<style>
+body {background-color: powderblue;}
+h1   {color: blue;}
+</style>
+</head>
+
+          An external style sheet is used to define the style for many HTML pages.
+With an external style sheet, you can change the look of an entire web site, by changing one file!
+To use an external style sheet, add a link to it in the <head> section of the HTML page:
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+   An external style sheet can be written in any text editor. The file must not contain any HTML code, and must be saved with a .css extension.
+
+ The CSS border property defines a border around an HTML element:
+ p {
+    border: 1px solid powderblue;
+}
+
+  The CSS padding property defines a padding (space) between the text and the border:
+  p {
+    border: 1px solid powderblue;
+    padding: 30px;
+}
+   The CSS margin property defines a margin (space) outside the border:
+    p {
+    border: 1px solid powderblue;
+    margin: 50px;
+}
+  
+  To define a specific style for one special element, add an id attribute to the element:
+<p id="p01">I am different</p>
+then define a style for the element with the specific id in head tag:
+#p01 {
+    color: blue;
+} 
+Note: The id of an element should be unique within a page, so the id selector is used to select one unique element!
+
+      To define a style for a special type of elements, add a class attribute to the element:
+<p class="error">I am different</p>
+
+then define a style for the elements with the specific class:
+p.error {
+    color: red;
+} 
+
+     External style sheets can be referenced with a full URL or with a path relative to the current web page.
+    1.This example uses a full URL to link to a style sheet:
+     <link rel="stylesheet" href="https://www.w3schools.com/html/styles.css"> 
+    2.This example links to a style sheet located in the html folder on the current web site:
+      <link rel="stylesheet" href="/html/styles.css"> 
+    3. This example links to a style sheet located in the same folder as the current page:
+       <link rel="stylesheet" href="styles.css"> 
+
+MAKING TABLE: tables have rows(tr) and columns(td) {use border="1"with table tag}
+<table>
+ <tr>                       (This e.g. makes two rows as two tr and 2 columns each as two td)
+<td>Deep</td>
+<td>Karan</td>
+ </tr>
+ <tr>
+ <td>Akhil</td>
+<td>Datt</td>
+ </tr>
+</table>
+to make it more good use attribute border .
+
+MAKING HEADER FOR TABLES:
+use <th></th>tag within <tr></tr>to make headings for your data.
+
+if we wanna expand our particular column then we can use colspan attribute inside our <table>
+
+table width: 1.this can be done width attribute along with border and we can give its value either by pixels or by %
+
+2.CELLPADDING: it provides space b/w text and border (use cellpadding attribute)
+3. CELLSPACING: it provides space b/w cells itself  (use cellspacing attribute)
+
+LIST: 
+1. Unordered list : <ul></ul>
+and to enter items in list use<li></li> insise ul tag
+2. Ordered list: <ol></ol>(only difference is that now items come numbered)
