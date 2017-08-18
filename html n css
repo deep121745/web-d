@@ -33,6 +33,10 @@ HTML links are defined with the <a> (anchor)tag:
 <a href="https://www.w3schools.com">This is a link</a> 
 The link's destination is specified in the href attribute. (attributes are used to provide additional information about HTML elements)
 
+To navigate through our different webpages use :
+<a href="filename.html">second page</a>
+
+
 HTML images are defined with the <img> tag.
 The source file (src), alternative text (alt), width, and height are provided as attributes:
  <img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142"> 
@@ -164,7 +168,7 @@ p {line-height: 150%;}                     (used for line spacing)
 With an external style sheet, you can change the look of an entire web site, by changing one file!
 To use an external style sheet, add a link to it in the <head> section of the HTML page:
 <head>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" type ="text/css" href="styles.css">
 </head>
    An external style sheet can be written in any text editor. The file must not contain any HTML code, and must be saved with a .css extension.
 
@@ -362,5 +366,105 @@ THE div ELEMENT:
 ...
 <body>
 <div>abc</div>
+</body>
+
+**CHILD SELECTORS (styling child) -> a child here means a tag inside another tag 
+for e.g we wanna style only link of p 
+<body>
+<a href ="http://google.com">GOOGLE</a>
+<p><a href ="http://google.com">GOOGLE</a></p>
+
+so in order to do that :
+<style>
+p > a {color: red;}
+</style>
+
+PSUEDO ELEMENT:  not fake but a piece of element e.g; first letter of header ,or a first line of paragraph
+<p>what arre you doing tomorrow</p>
+<p>nothing</p>
+<p>what?</p>
+
+<style>
+p:first-letter{font-weight:bold;}
+</style>
+
+OVERRIDING STYLES:  when we wanna change particular pages along with external css , cascadding comes into play
+Use style tag after link tag to override particular page
+**********IF if we put style tag before link tag then it will not work as it looks for the most recent tag.
+*********
+POSITIONING -> It is cusutomisation of our elements
+absolute positoning:> gives complete over position of elements doesn't matter they overlap or not
+relative positioning:>  instead of moving absolutely from top it moves relatively from where it should be without positioning
+-> usually people use relative for outer box and absolute for inner box
+fixed positioning:>  similar to absolute positioning but element associated with it is always fixed in its position whteher we scroll down our webpage.
+no one uses fixed positioning
+
+SETTING MAX WIDTH AND HEIGHT: we can do it with img ,tables,etc.
+<style type="text/css">
+img{max-height:200px;
+     max-width:200px;}
+</style>
+
+***INTRODUCTION TO FORUMS: forum is way to input data to give to website.
+how to setup basic forum:
+<body>
+<form>
+ Username: <input type="text" name="username" size="50px" maxlength="5" value="Enter name here"/>                             size,maxlength and value are attributes
+ </form>
+</body>
+
+*****
+In many cases we want to take input from user from predesigned list i.e, user don't have to enter text here:
+RADIO BUTTONS: it means we have bunch of buttons but we can use only one of them
+-> radio buttons have same type,same name but different value.
+<body>
+<form>
+Male:<input type="radio" name="sex" value="male "/>
+Female: <input type="radio" name="sex" value="female "/>
+</form>
+
+CHECKBOX: 
+<form>
+<p>select your choices</p>
+Milk <input type ="checkbox" name="food" value="milk "/>
+Cheese <input type ="checkbox" name="food" value="cheese "/>
+Honey <input type ="checkbox" name="food" value="honey"/>
+Butter <input type ="checkbox" name="food" value="butter /">
+</form>
+
+DROP DOWN LIST: take space of single list but gives us all choices
+<form>
+<p>What are you doing today?</p>
+<select name="activities">
+<option value="play">Play the guitar </options>
+<option value="eat">Eating food</option>
+<option value="read">Reading</option>
+</select>
+</form>
+
+TEXT AREA: used whenever we wanna get big info from user like their description , comments,etc
+<form>
+Write your description here:
+<textarea name="bio" rows="6" cols="40">                   --> rows and cols are attributes
+Type something here
+</textarea>
+</form>
+
+PASSWORD AND UPLOAD FILES:
+<form>
+Password: <input type="password" name="pword"/>
+<p>Now submit your file</p>
+<input type="file" name="deepsfile"/>
+</form>
+
+SUBMITTING FORMS:
+<body>
+<form action="filenamewhichprocessed" method="post">            ---> this is php , process after submitting
+Username: <input type="text" name="username" />
+</br>
+Password: <input type="passwd" name="pass" />
+</br>
+<input type ="submit" value="SUBMIT!">         --> submit info and value shows text inside our button
+</form>
 </body>
 
